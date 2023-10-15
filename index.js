@@ -68,7 +68,7 @@ function checkWinner(){
     }
     else if(!options.includes("")){
         statusText.textContent = `Draw!`;
-        cells.forEach(cell => cell.style.backgroundColor="yellow");
+        cells.forEach(cell => cell.classList.add("draw"));
         running = false;
     }
     else{
@@ -80,8 +80,10 @@ function restartGame(){
     options = ["", "", "", "", "", "", "", "", ""];
     statusText.textContent = `${currentPlayer}'s turn`;
     cells.forEach(cell => {
-        cell.textContent = ""
-        cell.classList.remove("check")}
+        cell.textContent = "";
+        cell.classList.remove("draw");
+        cell.classList.remove("check");
+            }
         );
 
     running = true;
