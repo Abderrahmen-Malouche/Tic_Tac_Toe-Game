@@ -68,7 +68,7 @@ function checkWinner(){
     }
     else if(!options.includes("")){
         statusText.textContent = `Draw!`;
-        cells.forEach(cell => cell.style.backgrounColor="yellow");
+        cells.forEach(cell => cell.style.backgroundColor="yellow");
         running = false;
     }
     else{
